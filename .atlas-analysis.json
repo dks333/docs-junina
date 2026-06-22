@@ -1,0 +1,78 @@
+{
+  "projectType": "saas",
+  "projectName": "Mintlify Editor",
+  "projectDescription": "A browser-based WYSIWYG documentation editor with real-time collaboration, Git sync, live preview, and an AI assistant — built to let your whole team write and publish docs without touching code.",
+  "theme": "willow",
+  "primaryColor": "#0D9373",
+  "lightColor": "#10B981",
+  "darkColor": "#065F46",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Editor",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "editor/overview",
+              "editor/tutorial"
+            ]
+          },
+          {
+            "group": "Writing",
+            "pages": [
+              "editor/pages",
+              "editor/navigation",
+              "editor/media"
+            ]
+          },
+          {
+            "group": "Publishing",
+            "pages": [
+              "editor/branching-and-publishing",
+              "editor/live-preview",
+              "editor/git-essentials"
+            ]
+          },
+          {
+            "group": "AI & Automation",
+            "pages": [
+              "editor/agent",
+              "editor/settings"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "editor/configurations",
+              "editor/keyboard-shortcuts"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Visual (WYSIWYG) and source (MDX) editing modes",
+    "Real-time team collaboration with live cursors",
+    "Git-backed publishing — every publish is a commit",
+    "Branching and pull request workflow from the browser",
+    "Live preview — instant rendering without a build",
+    "Preview deployments — shareable URLs per branch",
+    "Built-in AI agent for writing, editing, and navigation",
+    "Persistent AI instructions for consistent voice and style",
+    "Drag-and-drop navigation management synced to docs.json",
+    "Comprehensive configurations panel (branding, analytics, SEO, redirects)"
+  ],
+  "publicApiSurface": [
+    "Editor toolbar: branch selector, Ask Agent (Cmd+I), preview, publish",
+    "Navigation sidebar: pages, groups, tabs, anchors, dropdowns, menus, products, versions, languages",
+    "Configurations panel: General, Branding, Styling, Typography, Navbar, Footer, Banner, API reference, Redirects, SEO, Analytics, Variables",
+    "AI Agent: edit pages, update navigation/docs.json, run bash commands, configure site via code mode",
+    "AI instructions (user-scoped): persistent style/tone/terminology rules",
+    "Publishing settings (admin): PR instructions, draft PRs toggle, default merge method",
+    "Keyboard shortcuts: Cmd+K, Cmd+I, Cmd+Shift+M, Cmd+Shift+D, Cmd+Shift+F, Cmd+\\",
+    "Preview deployment URL: organization-branch-name.mintlify.app",
+    "Share editor link: https://app.mintlify.com/{org}/{project}/editor/{branch}/~/{filepath}"
+  ]
+}

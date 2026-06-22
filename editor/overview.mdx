@@ -1,0 +1,41 @@
+---
+title: "Mintlify Editor overview: browser-based docs editing"
+sidebarTitle: "Overview"
+description: "The Mintlify Editor saves changes automatically, keeps Git in sync, and lets your whole team collaborate on docs in real time — no local setup needed."
+---
+
+The Mintlify Editor lets you write, edit, and publish documentation directly in your browser — no local environment, no CLI, and no manual Git commands required. Changes save automatically as you type, your entire team can collaborate on the same branch in real time, and every publish writes cleanly back to your repository.
+
+## How the editor works
+
+**Changes save automatically.** Your work persists across tabs, devices, and network interruptions. You never need to hit a save button, and nothing is lost if your connection drops. Changes only go live when you explicitly publish them.
+
+**Git stays in sync.** When someone pushes changes to your repository from outside the editor — a local commit, a CI merge, or another tool — those changes appear in the editor automatically. You don't need to pull or refresh. The editor merges non-conflicting changes silently and highlights anything that needs your attention.
+
+**Publishing writes to Git.** When you publish, the editor commits your changes directly to your repository. On a deployment branch, this updates your live site immediately. On a feature branch, publishing creates or updates a pull request, giving your team a chance to review before anything goes live.
+
+**Your team edits together.** Multiple people can edit the same page or different pages on the same branch at the same time. Collaborators' cursors and changes appear in real time, so you always know who is working on what.
+
+## The editor layout
+
+The editor interface has two main areas:
+
+| Area | What it does |
+|---|---|
+| **Top bar** | Holds the branch selector (to create or switch branches), the `Ask Agent` button for AI-assisted editing, the preview toggle to see a live render of the current page, and the `Publish` button to commit and deploy your changes. |
+| **Navigation sidebar** | Lists all pages in your docs. Use it to select a page to edit, create new pages, and manage your site's structure and grouping. |
+
+<CardGroup cols={2}>
+  <Card title="Tutorial" icon="rocket" href="/editor/tutorial">
+    Follow the step-by-step tutorial to make your first edit and publish it live.
+  </Card>
+  <Card title="Write pages" icon="pen-to-square" href="/editor/pages">
+    Learn how to create, edit, and structure pages in the editor.
+  </Card>
+  <Card title="Branch & Publish" icon="code-branch" href="/editor/branching-and-publishing">
+    Understand the full branching and publishing workflow.
+  </Card>
+  <Card title="AI Agent" icon="sparkles" href="/editor/agent">
+    Explore AI-powered editing to write and improve docs faster.
+  </Card>
+</CardGroup>

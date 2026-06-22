@@ -1,0 +1,53 @@
+---
+title: "Editor settings: AI instructions and publishing config"
+sidebarTitle: "Settings"
+description: "Configure per-user AI instructions and admin-level publishing settings including PR behavior, draft PRs, and default merge method in the Mintlify Editor."
+---
+
+The editor has two layers of settings — per-user **AI instructions** (for writing style and tone) and per-deployment **publishing settings** (for how PRs are created and merged, admin only). You can configure both from the Settings icon in the editor.
+
+## AI instructions
+
+AI instructions are persistent guidelines sent to the AI with every request. They apply to all **Edit with AI** actions and **Ask Agent** sessions, and are scoped to your user account — they don't affect other contributors on your team.
+
+**When to use:** Enforce a consistent voice, lock in product terminology, ban filler phrases, or require specific MDX components like `<Note>` or `<Warning>`.
+
+**How to configure:** Click the **Settings icon** in the editor, fill in the **AI instructions** field, and save. To remove your instructions, clear the field and save.
+
+Here's an example set of AI instructions:
+
+```
+- Use second person ("you") and active voice.
+- Use sentence case for all headings.
+- Refer to the product as "Acme" — never "Acme Inc." or "the platform".
+- Wrap notes and warnings in <Note> or <Warning> components.
+- Do not add introductory filler like "In this guide" or "Let's explore".
+```
+
+## Publishing settings (admin only)
+
+<Note>
+  Publishing settings are only visible and editable by admins of the deployment. Other team members can view the editor but cannot change these settings.
+</Note>
+
+### Pull request instructions
+
+Provide guidance to the AI when it generates PR titles and descriptions. Use this field to enforce required sections, apply a consistent template, or control the tone and length of PR summaries.
+
+### Create PRs as drafts
+
+Toggle this setting on to open every new pull request as a draft by default. This is useful when your workflow requires a mandatory review pass before signaling readiness, or when you want to share a preview without implying the changes are complete.
+
+### Default merge method
+
+Choose how pull requests are merged into your deployment branch:
+
+| Method | Behavior |
+|--------|----------|
+| **Merge** | Creates a merge commit. Preserves the full branch history, including all individual commits. |
+| **Squash** | Combines all commits from the branch into a single commit on the deployment branch. Keeps history clean and linear. |
+| **Rebase** | Replays each commit from the branch onto the deployment branch without creating a merge commit. |
+
+<Warning>
+  Match your default merge method to the merge strategies allowed in your Git provider's branch protection settings. A mismatch can cause pull requests to fail at merge time.
+</Warning>

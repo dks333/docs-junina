@@ -1,0 +1,51 @@
+---
+title: "Add images, videos, and embeds to your docs"
+sidebarTitle: "Media"
+description: "Insert images, videos, and embedded media into Mintlify docs pages using slash commands, drag and drop, or the embed tool for YouTube, Loom, and Vimeo."
+---
+
+The Mintlify Editor makes it straightforward to enrich your documentation with images, videos, and external media. You can insert media using slash commands, drag and drop files directly onto the page, or embed content from external platforms — all without leaving the editor.
+
+## Images
+
+Add an image using the `/image` slash command, or drag and drop an image file from your computer onto the page. Uploaded images are automatically saved to your `images/` directory.
+
+### Light and dark variants
+
+If your image needs to look different depending on the reader's color scheme, you can set separate images for light and dark mode:
+
+<Steps>
+  <Step title="Select the image">
+    Hover over the image you've already inserted to reveal the image toolbar above it.
+  </Step>
+  <Step title="Open Light/Dark variants">
+    Click **Light/Dark variants** in the image toolbar.
+  </Step>
+  <Step title="Upload each variant">
+    Provide one image for light mode and one for dark mode. Mintlify will serve the correct variant automatically based on the reader's appearance setting.
+  </Step>
+</Steps>
+
+<Tip>
+  For images that look different in light and dark mode, use light/dark variants — hover the image and click the image toolbar to set separate images for each appearance.
+</Tip>
+
+## Videos
+
+Add a video using the `/video` slash command, or drag and drop a video file onto the page. Uploaded videos are automatically saved to your `videos/` directory.
+
+## Embed external media
+
+Use the `/embed` command to embed content from an external platform without uploading any files.
+
+<Steps>
+  <Step title="Open the embed tool">
+    Type `/embed` in the editor and select the **Embed** option from the component menu.
+  </Step>
+  <Step title="Paste the URL">
+    Paste the URL of the content you want to embed. The editor supports **YouTube**, **Loom**, and **Vimeo** links. You can also search for the platform by typing `youtube`, `yt`, `loom`, or `vimeo` in the component menu to jump straight to the embed block.
+  </Step>
+  <Step title="Use a custom embed (optional)">
+    For content not covered by the built-in URL detection, toggle **Manual embed** to enter custom HTML — useful for embedding iframes or third-party widgets.
+  </Step>
+</Steps>

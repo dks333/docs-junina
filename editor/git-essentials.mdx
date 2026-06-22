@@ -1,0 +1,42 @@
+---
+title: "Git essentials for Mintlify Editor users"
+sidebarTitle: "Git Essentials"
+description: "Understand the Git concepts behind the Mintlify Editor — commits, branches, pull requests, merges, and how every editor action maps to a Git operation."
+---
+
+The Mintlify Editor is backed by Git. Every time you publish, you're creating a Git commit. Every branch you create in the editor is a real Git branch in your repository. You don't need to use the command line — the editor handles all of that for you — but understanding what's happening under the hood makes it easier to collaborate with teammates who work from a Git CLI and helps you reason about your content's history.
+
+<Note>
+  You don't need to know Git to use the editor — but understanding these concepts helps you collaborate with teammates who use Git CLI tools and understand what's happening when you publish.
+</Note>
+
+## Key Git concepts
+
+Here are the core Git terms you'll encounter while working in the editor:
+
+| Term | Definition |
+|---|---|
+| Commit | A saved snapshot of your content with an optional message; created each time you publish. |
+| Branch | A separate line of work; changes on a feature branch don't affect your live site. |
+| Deployment branch | Usually `main`; the branch that builds and serves your live documentation site. |
+| Pull request | A proposal to merge a feature branch into the deployment branch; enables team review before going live. |
+| Merge | Combines a feature branch into the deployment branch and triggers a new deployment. |
+| Conflict | Incompatible changes made to the same files across different branches. |
+| Diff | A comparison between two versions of a file; shown in the editor before you publish. |
+
+## How editor actions map to Git
+
+Every action you take in the editor corresponds to one or more Git operations. The table below shows exactly what happens behind the scenes:
+
+| Editor action | Git operation |
+|---|---|
+| Edit a page | Auto-save to Mintlify servers; no commit yet |
+| Publish on deployment branch | `git commit` + `git push` → deployment triggered |
+| Save in branch | `git commit` to feature branch |
+| Create pull request | `git push` + open PR against deployment branch |
+| Merge and publish | Merge PR + trigger deployment |
+| Create a branch | `git checkout -b <branch-name>` |
+| Switch branches | `git checkout <branch-name>` |
+| External push / CLI update | Incoming changes sync via three-way merge |
+
+When an external push comes in — for example, a teammate commits directly from the CLI — the editor syncs those changes automatically. Non-overlapping changes are applied cleanly. If changes overlap in a way Git can't resolve on its own, the editor highlights them as conflicts for you to resolve manually.

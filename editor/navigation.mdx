@@ -1,0 +1,52 @@
+---
+title: "Organize your docs navigation in the Mintlify Editor"
+sidebarTitle: "Navigation"
+description: "Add, reorder, and configure navigation elements in the Mintlify Editor — all changes sync to docs.json automatically when you publish."
+---
+
+The navigation sidebar in the Mintlify Editor lets you organize your docs visually — no manual JSON editing required. Everything you arrange here syncs directly to `docs.json` the next time you publish, keeping your sidebar structure and your source of truth in lockstep.
+
+## Add navigation elements
+
+<Steps>
+  <Step title="Add at the root level">
+    Click **Add new** at the bottom of the navigation tree to insert a new element at the top level of your sidebar.
+  </Step>
+  <Step title="Add a nested element">
+    Hover over any existing element and click the **+** button next to it to add a child element inside it.
+  </Step>
+  <Step title="Reorder or nest by dragging">
+    Drag and drop any element to reorder it or move it inside another element. The tree updates live as you drag.
+  </Step>
+  <Step title="Use right-click for more actions">
+    Right-click a **page** to access settings or delete it. Right-click a **navigation element** to convert its type, duplicate it, add children, ungroup it, or delete it.
+  </Step>
+</Steps>
+
+## Navigation element types
+
+Mintlify supports nine types of navigation elements. Combine them to build the structure that best fits your docs.
+
+| Type | Description |
+|---|---|
+| **Pages** | Individual doc files; the core building block of any navigation tree. |
+| **Groups** | Collapsible sections that organize related pages; groups can be nested inside other groups. |
+| **Tabs** | Top-level sections with horizontal tab navigation — useful for separating major areas like API Reference and Guides. |
+| **Anchors** | Persistent sidebar items that remain visible at all times; can be set as global across all sections. |
+| **Dropdowns** | Expandable menus that offer a lighter-weight alternative to tabs for switching between sections. |
+| **Menus** | Dropdown nav items within a tab that link directly to pages. |
+| **Products** | A switcher for navigating between multiple distinct product documentation sets. |
+| **Versions** | A switcher for multiple simultaneous documentation versions (e.g., v1 and v2). |
+| **Languages** | A switcher for multiple language variants of your documentation. |
+
+## Configure elements
+
+Hover over any navigation element and click the **gear icon** to open its configuration options:
+
+- **Title** — the label displayed in the sidebar for that element.
+- **Icon** — an optional icon shown alongside the title.
+- **Tag** — a small badge displayed next to the title, such as `NEW` or `BETA`, to flag updated or preview content.
+
+<Note>
+  Navigation changes are saved automatically and committed to your repository the next time you publish.
+</Note>

@@ -1,0 +1,86 @@
+---
+title: "Get started with the Mintlify Editor in 5 steps"
+sidebarTitle: "Tutorial"
+description: "Learn how to create a branch, edit pages, open a pull request, and publish live — a complete walkthrough of the Mintlify Editor workflow."
+---
+
+This tutorial walks you through the full Mintlify Editor workflow: creating a branch, making changes to your docs, opening a pull request, getting it reviewed, and merging it to your live site. The whole process takes about 10 minutes.
+
+<Steps>
+  <Step title="Create a branch">
+    Always make changes on a dedicated branch so your edits are isolated and reviewable before they go live.
+
+    1. Click the branch name in the top bar — it usually reads `main` on a fresh project.
+    2. Click **Create new branch**.
+    3. Enter a descriptive name for your branch, such as `update-quickstart`.
+    4. Click **Create branch**.
+
+    The editor switches to your new branch automatically. Any changes you make from this point are isolated to this branch until you publish them.
+
+    <Tip>
+      Use short, lowercase, hyphen-separated branch names that describe the change — for example, `add-authentication-guide` or `fix-api-typos`. This makes pull requests easier to review at a glance.
+    </Tip>
+  </Step>
+
+  <Step title="Make your changes">
+    With your branch active, you can edit existing pages or create new ones.
+
+    **To edit an existing page:**
+    1. Click the page name in the navigation sidebar to open it.
+    2. Click anywhere in the content area and start typing.
+    3. Press `/` to open the component picker and insert headings, callouts, code blocks, cards, and more.
+
+    **To create a new page:**
+    1. Click the **+** (plus) button next to the navigation group where the page should live.
+    2. Select **Add a page**.
+    3. Enter a filename for the new page (for example, `my-new-guide`).
+
+    <Note>
+      Changes save automatically as you type — you don't need to press any save shortcut. Your work is preserved even if you close the tab or lose your connection.
+    </Note>
+  </Step>
+
+  <Step title="Publish your branch">
+    When your edits are ready for review, publish the branch to create a pull request.
+
+    1. Click **Publish** in the top bar to open the publish menu.
+    2. Optionally, click any of the listed changed files to review a diff of your edits before committing.
+    3. Click **Create pull request**, add a descriptive title and description, then click **Publish pull request**.
+
+    <Tip>
+      If you're not ready to open a pull request yet, click **Save in branch** instead. This commits your changes to the branch without opening a PR, so you can keep iterating and open the PR later.
+    </Tip>
+
+    After the pull request is created, a preview deployment builds automatically. Share the preview URL with reviewers so they can see exactly how the docs will look before anything goes live.
+  </Step>
+
+  <Step title="Get your pull request approved">
+    Share the pull request link with your teammates. Reviewers use GitHub or GitLab to leave comments and approve the changes — the same review workflow you use for code.
+
+    If reviewers request changes:
+    1. Switch back to your branch in the editor (it should still be selected).
+    2. Make the requested edits — they push to the existing pull request automatically.
+    3. Notify reviewers that the updates are ready for another look.
+
+    <Note>
+      You don't need to open a new pull request after making updates. Every publish on the same branch appends commits to the existing PR.
+    </Note>
+  </Step>
+
+  <Step title="Merge and publish">
+    Once the pull request is approved, merge it to deploy your changes to the live site.
+
+    1. Click **Publish** in the top bar — the publish menu now shows the current PR status.
+    2. Click **Merge and publish**.
+
+    The editor merges the pull request and automatically switches you back to the deployment branch. Your live site updates within roughly 30 seconds to a few minutes.
+
+    <Tip>
+      After merging, verify the changes on your live site by clicking the preview toggle or visiting your docs URL directly.
+    </Tip>
+  </Step>
+</Steps>
+
+<Note>
+  This tutorial covers the essentials, but there's a lot more you can do with branches and publishing — including working with multiple feature branches and managing conflicts. See the [Branching and publishing](/editor/branching-and-publishing) guide for a deeper look.
+</Note>

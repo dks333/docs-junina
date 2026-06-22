@@ -1,0 +1,68 @@
+---
+title: "Ask Agent: AI-powered editing and configuration"
+sidebarTitle: "Ask Agent"
+description: "The Mintlify Editor's built-in AI agent can write pages, reorganize navigation, update docs.json, and configure your site — all on your current branch."
+---
+
+The built-in Ask Agent (Cmd+I / Ctrl+I) can edit pages, reorganize navigation, update `docs.json`, search your repository, and configure site settings. It works on the current branch and shows you a diff of everything it changes.
+
+## Open the agent
+
+Open the agent by clicking the **Ask agent** button in the editor toolbar, or press **Cmd+I** on macOS / **Ctrl+I** on Windows. To close the panel, click the **X** button or press the same shortcut again.
+
+## Send a message
+
+Type your request in the chat box and press **Enter** to send. Use `@` to mention a specific page and give the agent direct context about where to make changes.
+
+Here are some example prompts to get you started:
+
+<CodeGroup>
+
+```text Editing content
+Simplify the introduction on the quickstart page
+Fix grammar errors across all pages
+Add a new page called 'Authentication' under the API group
+```
+
+```text Managing navigation
+Rename all references to 'widget' to 'component' across the docs
+Update the navigation to add a new Guides tab
+```
+
+</CodeGroup>
+
+## Attach files
+
+Click the **paperclip icon** in the chat input or **drag and drop** files directly into the panel to attach them to your message.
+
+**Supported file types:**
+
+- **Images** — JPG, PNG, GIF, WebP, SVG
+- **Documents** — PDF
+- **Code and text files** — `.js`, `.ts`, `.mdx`, `.json`, `.yaml`, and more
+
+**Limits:** 5 MB per file, up to 10 files per message.
+
+## Add a selection
+
+To focus the agent on a specific passage, select text in visual mode, then click **Add to agent** in the floating toolbar that appears. The selected text is attached as context for your next message.
+
+## What the agent can do
+
+1. **Edit pages** — Write, rewrite, expand, and reorganize content across one or many pages.
+2. **Search and navigate** — Search across the entire repository to find and reference any file.
+3. **Update navigation and docs.json** — Add, rename, reorder, or delete navigation elements and configure redirects.
+4. **Run bash commands** — Execute commands like `grep` and `rg` for bulk find-and-replace or large-scale operations.
+5. **Configure your site (code mode)** — Set up authentication, workflows, and custom domains by writing and running scripts against the Mintlify dashboard.
+
+## Review changes
+
+After the agent finishes, a **Changed files** panel appears in the chat. Click any file in the list to open a diff view and review exactly what was added, removed, or modified before you commit.
+
+## Session history
+
+Click the **clock icon** in the agent panel header to access previous chat sessions. You can revisit past conversations to review what the agent did or continue from where you left off.
+
+<Tip>
+  Set AI instructions in your editor settings to give the agent persistent rules about your writing style, terminology, and preferred components — it applies them automatically on every request.
+</Tip>

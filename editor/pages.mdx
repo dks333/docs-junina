@@ -1,0 +1,98 @@
+---
+title: "Create and edit pages in the Mintlify Editor"
+sidebarTitle: "Pages"
+description: "Learn how to create, edit, configure, and manage pages in the Mintlify Editor using visual or source mode with full MDX support."
+---
+
+The Mintlify Editor gives you everything you need to build and maintain documentation pages without leaving your browser. This page covers how to create new pages, switch between visual and source editing modes, configure page metadata, and track file changes.
+
+## Create a page
+
+You have two ways to create a page depending on whether it should appear in your sidebar navigation.
+
+**Add a page to navigation**
+
+<Steps>
+  <Step title="Open the Navigation view">
+    Click the file icon in the left panel or press <kbd>Cmd+Shift+F</kbd> / <kbd>Ctrl+Shift+F</kbd> to toggle to the Navigation view.
+  </Step>
+  <Step title="Click the Plus button">
+    Hover over the navigation element where you want the page to appear, then click the **+** button next to it.
+  </Step>
+  <Step title="Select Add a page">
+    Choose **Add a page** and enter a filename. The `.mdx` extension is added automatically.
+  </Step>
+</Steps>
+
+**Create an unlisted page**
+
+Unlisted pages exist in your repository but don't appear in the published sidebar. To create one, switch to the **Files view**, right-click the folder you want, and select **New file**.
+
+## Edit content
+
+The editor supports two modes. Switch between them using the eye/code icon in the toolbar, or press <kbd>Cmd+Shift+M</kbd> / <kbd>Ctrl+Shift+M</kbd>.
+
+<Tabs>
+  <Tab title="Visual mode">
+    Visual mode gives you a live WYSIWYG preview of your page as you write.
+
+    - Press `/` to open the component menu and insert any Mintlify component.
+    - Drag and drop images or videos directly onto the page.
+    - Insert a link with <kbd>Cmd+K</kbd> / <kbd>Ctrl+K</kbd>, or drag a page from the file tree to create a link automatically.
+    - Right-click a page in the file tree to copy its link.
+    - Type `:keyword` to insert an emoji.
+    - Use the floating toolbar when your cursor is inside a table.
+
+    Visual mode also includes extra options for code blocks — see [Code block options](#code-block-options) below.
+  </Tab>
+  <Tab title="Source mode">
+    Source mode gives you direct access to the underlying MDX file.
+
+    - Edit frontmatter, raw MDX, and component props by hand.
+    - Use any valid MDX syntax, including custom components and expressions.
+    - Ideal for bulk edits or working with complex component configurations.
+  </Tab>
+</Tabs>
+
+### Code block options
+
+When you're in visual mode, hovering over a code block reveals additional options:
+
+- **Highlight or focus lines** — draw attention to specific lines.
+- **Mark diff lines** — tag lines as additions or removals.
+- **Wrap toggle** — enable or disable line wrapping.
+- **Expandable/collapsible toggle** — let readers show or hide the block.
+
+## Block actions
+
+In visual mode, hover over any content block to reveal the drag handle on the left. Click the handle to open the context menu, which lets you:
+
+- **Turn into** — convert the block to a different type (e.g., turn a paragraph into a callout).
+- **Duplicate** — insert a copy of the block directly below.
+- **Delete** — remove the block from the page.
+
+You can also drag the handle to reorder blocks anywhere on the page.
+
+## Configure a page
+
+Hover over a page in the sidebar and click the **gear icon**, or right-click and select **Settings**, to open the page configuration panel.
+
+| Field | Description |
+|---|---|
+| **Title** | The main `<h1>` heading displayed at the top of the page. |
+| **Slug** | The URL path for the page (e.g., `/guides/quickstart`). |
+| **Sidebar title** | A shorter label shown in the navigation sidebar, if different from the title. |
+| **Description** | A brief summary used for SEO meta tags and social previews. |
+| **Keywords** | Comma-separated terms that improve search discoverability. |
+| **Layout** | Page width — choose from `standard`, `wide`, `centered`, or `custom`. |
+
+## View file changes
+
+To review what you've changed on a page, open the diff view with the **View diff** button in the toolbar, or press <kbd>Cmd+Shift+D</kbd> / <kbd>Ctrl+Shift+D</kbd>.
+
+- In **visual mode**, you'll see a rendered visual diff that highlights added and removed content inline.
+- In **source mode**, you'll see a traditional line-by-line text diff of the raw MDX.
+
+<Tip>
+  Use the Navigation view to see your sidebar as visitors see it, and the Files view to browse all files including unlisted ones.
+</Tip>

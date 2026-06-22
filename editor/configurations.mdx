@@ -1,0 +1,266 @@
+---
+title: "Configure your docs site in the Mintlify Editor"
+sidebarTitle: "Configurations"
+description: "Use the configurations panel to customize branding, styling, typography, analytics, redirects, SEO, and more — all synced to docs.json in real time."
+---
+
+The configurations panel (accessible via the configurations icon in the editor toolbar) lets you manage all site-wide settings. Changes sync with co-editors in real time and map to top-level `docs.json` properties — no manual JSON editing required.
+
+<Note>
+  All changes in the configurations panel are automatically saved and will be committed to your repository the next time you publish.
+</Note>
+
+## What you can configure
+
+<CardGroup cols={2}>
+  <Card title="General" icon="circle-info">
+    Site name and SEO description
+  </Card>
+  <Card title="Branding" icon="paintbrush">
+    Logo, favicon, and click-through URL
+  </Card>
+  <Card title="Styling" icon="palette">
+    Theme, colors, background decoration
+  </Card>
+  <Card title="Typography" icon="font">
+    Font family, weight, heading and body fonts
+  </Card>
+  <Card title="Navbar" icon="bars">
+    Primary CTA button and navbar links
+  </Card>
+  <Card title="Footer" icon="shoe-prints">
+    Social links and footer columns
+  </Card>
+  <Card title="Analytics" icon="chart-line">
+    GA, GTM, PostHog, Amplitude, and more
+  </Card>
+  <Card title="Redirects" icon="arrow-right-arrow-left">
+    Add and manage URL redirects
+  </Card>
+</CardGroup>
+
+## Configuration sections
+
+<AccordionGroup>
+  <Accordion title="General">
+    Controls the top-level identity of your docs site.
+
+    | Field | Description |
+    |---|---|
+    | **Name** | The display name of your documentation site. |
+    | **Description** | A short description used for SEO and AEO (AI Engine Optimization) — appears in search engine results and AI-generated summaries. |
+  </Accordion>
+
+  <Accordion title="Branding">
+    Controls logos and favicons shown across your site.
+
+    | Field | Description |
+    |---|---|
+    | **Logo (light)** | Logo displayed in light mode. Accepts PNG or JPG. To use an SVG, set it directly in `docs.json`. |
+    | **Logo (dark)** | Logo displayed in dark mode. Accepts PNG or JPG. |
+    | **Logo URL** | The URL users navigate to when clicking your logo. |
+    | **Favicon** | The small icon shown in browser tabs. Accepts ICO, PNG, GIF, or JPG. |
+  </Accordion>
+
+  <Accordion title="Styling">
+    Controls the visual appearance of your site, including colors and decorative elements.
+
+    | Field | Description |
+    |---|---|
+    | **Theme** | The overall UI theme for your docs. |
+    | **Primary color** | The main accent color used for links, buttons, and highlights. |
+    | **Light color** | Accent color applied in light mode. |
+    | **Dark color** | Accent color applied in dark mode. |
+    | **Background color** | The base background color of your site. |
+    | **Icon library** | The icon set used throughout your docs (e.g. Font Awesome). |
+    | **Strict appearance** | Prevents users from switching between light and dark mode. |
+    | **Default appearance** | The default color scheme on first visit — `system`, `light`, or `dark`. |
+    | **Background decoration** | A decorative pattern behind page content — `gradient`, `grid`, or `windows`. |
+    | **Background image** | A custom image displayed behind page content. |
+  </Accordion>
+
+  <Accordion title="Typography">
+    Controls the fonts used across your site.
+
+    | Field | Description |
+    |---|---|
+    | **Font family** | The primary font. Choose from Google Fonts or upload a self-hosted `woff`/`woff2` file. |
+    | **Weight** | The default font weight. |
+    | **Heading font** | A separate font applied to heading elements (`h1`–`h6`). |
+    | **Body font** | A separate font applied to body text. |
+  </Accordion>
+
+  <Accordion title="Navbar">
+    Controls links and calls to action displayed in the top navigation bar.
+
+    | Field | Description |
+    |---|---|
+    | **Primary button type** | The style of the primary CTA button (e.g. link, GitHub). |
+    | **Primary button label** | The text displayed on the primary CTA button. |
+    | **Primary button URL** | The destination URL for the primary CTA button. |
+    | **Navbar links** | Additional links shown in the navbar alongside the primary button. |
+  </Accordion>
+
+  <Accordion title="Footer">
+    Controls the bottom section of every page.
+
+    | Field | Description |
+    |---|---|
+    | **Social links** | Links to your social profiles — GitHub, X (Twitter), LinkedIn, Discord, YouTube, and Slack. |
+    | **Footer columns** | Up to four columns of links displayed in the footer. Each column has a title and a list of links. |
+  </Accordion>
+
+  <Accordion title="Banner">
+    Controls a site-wide announcement banner shown at the top of every page.
+
+    | Field | Description |
+    |---|---|
+    | **Content** | The banner message, written in MDX. |
+    | **Dismissible** | When enabled, users can close the banner. |
+    | **Type** | The severity style of the banner — `info`, `warning`, or `critical`. |
+    | **Color (light)** | A custom hex color for the banner in light mode. |
+    | **Color (dark)** | A custom hex color for the banner in dark mode. |
+  </Accordion>
+
+  <Accordion title="Thumbnail">
+    Controls the default Open Graph image generated for social sharing previews.
+
+    | Field | Description |
+    |---|---|
+    | **Background image** | An image used as the thumbnail background. |
+    | **Appearance** | Whether to generate the thumbnail in `light` or `dark` mode. |
+    | **Font** | The font used in the generated thumbnail. |
+  </Accordion>
+
+  <Accordion title="Content">
+    Controls how individual pages display metadata and supplemental content features.
+
+    | Field | Description |
+    |---|---|
+    | **Page eyebrow** | What appears above the page title — the current `section` name or a `breadcrumbs` trail. |
+    | **Timestamps** | Show last-updated timestamps on pages. |
+    | **LaTeX (KaTeX)** | Enable LaTeX math rendering via KaTeX. |
+  </Accordion>
+
+  <Accordion title="Code blocks">
+    Controls syntax highlighting and custom language support.
+
+    | Field | Description |
+    |---|---|
+    | **Theme** | The code block color theme — `system`, `dark`, or a custom Shiki theme. |
+    | **Custom code languages** | Register additional language definitions for syntax highlighting using Shiki-compatible grammars. |
+  </Accordion>
+
+  <Accordion title="Context menu">
+    Controls what appears when a user right-clicks or long-presses content on your site.
+
+    | Field | Description |
+    |---|---|
+    | **Options** | The actions surfaced in the context menu — copy, view source, and AI assistant links. |
+    | **Display** | Where the context menu trigger appears — in the page `header` or the table of contents (`toc`). |
+  </Accordion>
+
+  <Accordion title="Navigation">
+    Controls how nested navigation items behave in the sidebar.
+
+    | Field | Description |
+    |---|---|
+    | **Drilldown** | When enabled, clicking a navigation group drills into it rather than expanding it inline. |
+  </Accordion>
+
+  <Accordion title="Search">
+    Controls the search experience for your readers.
+
+    | Field | Description |
+    |---|---|
+    | **Placeholder text** | Custom text shown in the search input before a user starts typing. |
+    | **Feedback — thumbs** | Show thumbs-up/down feedback buttons on search results. |
+    | **Feedback — suggest edits** | Show a "suggest edits" prompt on search results. |
+  </Accordion>
+
+  <Accordion title="API reference">
+    Controls how API reference pages are generated and displayed.
+
+    | Field | Description |
+    |---|---|
+    | **OpenAPI specs** | Upload or link one or more OpenAPI specification files. |
+    | **AsyncAPI specs** | Upload or link one or more AsyncAPI specification files. |
+    | **MDX server** | The base URL used when generating MDX-based API reference pages. |
+    | **Playground display** | How the interactive API playground is shown on reference pages. |
+    | **Proxy server** | A proxy URL to route API playground requests through. |
+    | **MDX schema** | The schema definition used for MDX server-rendered API pages. |
+  </Accordion>
+
+  <Accordion title="Redirects">
+    Manage URL redirects without editing `docs.json` directly. Each redirect has three fields:
+
+    | Field | Description |
+    |---|---|
+    | **Source** | The original URL path to redirect from. |
+    | **Destination** | The target URL path to redirect to. |
+    | **Status** | The HTTP redirect status — `308` (permanent) or `307` (temporary). |
+
+    You can add, edit, and remove redirects directly in the panel.
+  </Accordion>
+
+  <Accordion title="SEO">
+    Controls search engine visibility and custom metadata.
+
+    | Field | Description |
+    |---|---|
+    | **Metatags** | Key-value pairs injected as `<meta>` tags across all pages (e.g. `og:site_name`). |
+    | **Indexing** | Mark specific pages as hidden from search engine indexing. |
+  </Accordion>
+
+  <Accordion title="Analytics">
+    Connect third-party analytics and monitoring tools to your docs site. Supported integrations include:
+
+    <Columns cols={3}>
+      <div>
+        - Amplitude
+        - Mixpanel
+        - Heap
+        - Google Analytics (GA)
+        - Google Tag Manager (GTM)
+        - PostHog
+      </div>
+      <div>
+        - Plausible
+        - Fathom
+        - Segment
+        - Hightouch
+        - Hotjar
+        - LogRocket
+      </div>
+      <div>
+        - Microsoft Clarity
+        - Intercom
+        - Clearbit
+        - And more
+      </div>
+    </Columns>
+
+    Each integration accepts the credentials required by that provider (e.g. an API key, tracking ID, or write key).
+  </Accordion>
+
+  <Accordion title="404 page">
+    Controls what users see when they visit a URL that doesn't exist.
+
+    | Field | Description |
+    |---|---|
+    | **Redirect to home** | Automatically send users to your home page instead of showing a 404. |
+    | **Title** | The heading shown on the 404 page. |
+    | **Description** | A short message shown below the title on the 404 page. |
+  </Accordion>
+
+  <Accordion title="Variables">
+    Define custom reusable key-value pairs that can be referenced throughout your docs content.
+
+    | Field | Description |
+    |---|---|
+    | **Key** | The variable name used to reference the value in MDX. |
+    | **Value** | The content that replaces the variable when your docs are rendered. |
+
+    Variables are useful for version numbers, product names, or any text that appears in multiple places and may change over time.
+  </Accordion>
+</AccordionGroup>

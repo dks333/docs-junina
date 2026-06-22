@@ -1,0 +1,100 @@
+---
+title: "Keyboard shortcuts for the Mintlify Editor"
+sidebarTitle: "Keyboard Shortcuts"
+description: "Complete keyboard shortcut reference for the Mintlify Editor — editor-wide commands, visual mode formatting, source mode editing, and smart text substitutions."
+---
+
+The Mintlify Editor supports keyboard shortcuts for common actions across editor-wide navigation, visual mode formatting, and source mode editing. The shortcuts follow macOS and Windows conventions.
+
+## Editor-wide shortcuts
+
+These shortcuts work regardless of which mode you are in.
+
+| Command | macOS | Windows |
+|---|---|---|
+| Search files and content | `Cmd+K` | `Ctrl+K` |
+| Toggle AI assistant | `Cmd+I` | `Ctrl+I` |
+| Switch visual / source mode | `Cmd+Shift+M` | `Ctrl+Shift+M` |
+| Toggle diff view | `Cmd+Shift+D` | `Ctrl+Shift+D` |
+| Switch Navigation / Files tree | `Cmd+Shift+F` | `Ctrl+Shift+F` |
+| Hide / show sidebar | `Cmd+\` | `Ctrl+\` |
+
+## Visual mode shortcuts
+
+<Tabs>
+  <Tab title="Formatting">
+    ### Text formatting
+
+    | Command | macOS | Windows |
+    |---|---|---|
+    | Bold | `Cmd+B` | `Ctrl+B` |
+    | Italic | `Cmd+I` | `Ctrl+I` |
+    | Underline | `Cmd+U` | `Ctrl+U` |
+    | Strikethrough | `Cmd+Shift+S` | `Ctrl+Shift+S` |
+    | Inline code | `Cmd+E` | `Ctrl+E` |
+    | Subscript | `Cmd+,` | `Ctrl+,` |
+    | Superscript | `Cmd+.` | `Ctrl+.` |
+  </Tab>
+  <Tab title="Headings & Blocks">
+    ### Headings
+
+    | Style | macOS | Windows |
+    |---|---|---|
+    | Normal text | `Cmd+Option+0` | `Ctrl+Alt+0` |
+    | Heading 1 | `Cmd+Option+1` | `Ctrl+Alt+1` |
+    | Heading 2 | `Cmd+Option+2` | `Ctrl+Alt+2` |
+    | Heading 3 | `Cmd+Option+3` | `Ctrl+Alt+3` |
+    | Heading 4 | `Cmd+Option+4` | `Ctrl+Alt+4` |
+
+    ### Lists and blocks
+
+    | Command | macOS | Windows |
+    |---|---|---|
+    | Unordered list | `Cmd+Shift+8` | `Ctrl+Shift+8` |
+    | Blockquote | `Cmd+Shift+B` | `Ctrl+Shift+B` |
+  </Tab>
+  <Tab title="Content Actions">
+    ### Content actions
+
+    | Command | macOS | Windows |
+    |---|---|---|
+    | Add link | `Cmd+K` | `Ctrl+K` |
+    | Add line break | `Cmd+Enter` | `Ctrl+Enter` |
+    | Open component menu | `/` | `/` |
+    | Open emoji picker | `: + keyword` | `: + keyword` |
+
+    <Note>
+      The component menu (`/`) and emoji picker (`: + keyword`) are triggered by typing the listed character — they are not key-chord shortcuts.
+    </Note>
+  </Tab>
+</Tabs>
+
+## Source mode shortcuts
+
+Source mode uses the Monaco editor (the same editor that powers VS Code), so standard VS Code shortcuts apply.
+
+| Command | macOS | Windows |
+|---|---|---|
+| Find | `Cmd+F` | `Ctrl+F` |
+| Toggle line comment | `Cmd+/` | `Ctrl+/` |
+| Indent | `Tab` | `Tab` |
+| Outdent | `Shift+Tab` | `Shift+Tab` |
+| Move line up | `Option+↑` | `Alt+↑` |
+| Move line down | `Option+↓` | `Alt+↓` |
+| Duplicate line below | `Shift+Option+↓` | `Shift+Alt+↓` |
+| Add cursor at click | `Option+Click` | `Alt+Click` |
+| Add cursor above | `Cmd+Option+↑` | `Ctrl+Alt+↑` |
+| Add cursor below | `Cmd+Option+↓` | `Ctrl+Alt+↓` |
+
+## Smart substitutions
+
+When typing in visual mode outside of a code block, the editor automatically replaces certain character sequences with their Unicode equivalents.
+
+| You type | Result |
+|---|---|
+| `->` | → |
+| `<-` | ← |
+| `=>` | ⇒ |
+| `<=` | ≤ |
+| `>=` | ≥ |
+| `!=` | ≠ |
